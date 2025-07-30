@@ -1,16 +1,16 @@
 # Votely – Real-time Voting App
 
-Votely là một ứng dụng bỏ phiếu thời gian thực được xây dựng bằng **Vue.js** cho frontend và **Node.js + Socket.io** cho backend. Người dùng có thể tạo chủ đề, tham gia bình chọn và theo dõi kết quả cập nhật trực tiếp.
+Votely is a real-time voting application built with **Vue.js** on the frontend and **Node.js + Socket.io** on the backend. Users can create polls, vote, and watch results update live.
 
-## Tính năng
+## Features
 
-- Tạo chủ đề bỏ phiếu
-- Tham gia bình chọn thời gian thực
-- Cập nhật kết quả live qua Socket.io
-- Xác thực người dùng (Đăng ký / Đăng nhập)
-- Giao diện hiện đại, hỗ trợ responsive
+- Create and manage voting polls
+- Real-time voting functionality
+- Live result updates via Socket.io
+- User authentication (Register / Login)
+- Modern, responsive UI
 
-## Công nghệ sử dụng
+## Tech Stack
 
 ### Frontend
 
@@ -27,9 +27,9 @@ Votely là một ứng dụng bỏ phiếu thời gian thực được xây dự
 - JWT Authentication
 - MongoDB (Mongoose)
 
-## Cài đặt
+## Installation
 
-### 1. Clone project
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/buithachIT/NodeJS_VueJS_Votely-Real-time-voting-project.git

@@ -1,17 +1,18 @@
-const express = require("express");
-const apiRoutes = require("./routes/api");
-
+const connection = require("./config/database");
 require("dotenv").config();
+const app = require("./app");
+const setupSwagger = require("./src/swagger");
 
-const app = express();
 const port = process.env.PORT;
+setupSwagger(app);
 
-//template engine
-app.set("views", "./views");
-app.set("view engine", "ejs");
-
-app.use("/v1/api/", apiRoutes);
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+(async () => {
+  try {
+    await connection();
+    app.listen(port, async () => {
+      console.log(`Example app listening on port ${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+})();
