@@ -1,8 +1,6 @@
 const sendSuccess = (
   res,
-  data = null,
-  message = "Success",
-  statusCode = 200
+  { data = null, message = "Success", statusCode = 200 } = {}
 ) => {
   return res.status(statusCode).json({
     success: true,
@@ -12,7 +10,10 @@ const sendSuccess = (
   });
 };
 
-const sendError = (res, errors = null, message = "Error", statusCode = 500) => {
+const sendError = (
+  res,
+  { message = "Error", statusCode = 500, errors = null } = {}
+) => {
   return res.status(statusCode).json({
     success: false,
     data: null,

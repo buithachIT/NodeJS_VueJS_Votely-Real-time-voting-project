@@ -77,18 +77,18 @@
 </template>
 
 <script setup>
-  import { onMounted } from "vue";
-  import axios from "@/utils/axios.customize";
+  // import { onMounted } from "vue";
+  // import axios from "@/utils/axios.customize";
 
-  const fetchHello = async () => {
-    try {
-      const response = await axios.get("http://localhost:8083/v1/api/buithach");
-      console.log("Check data", response);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  onMounted(() => {
-    fetchHello();
-  });
+  // const fetchHello = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:8083/v1/api/buithach");
+  //     console.log("Check data", response);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  // onMounted(() => {
+  //   fetchHello();
+  // });
 </script>

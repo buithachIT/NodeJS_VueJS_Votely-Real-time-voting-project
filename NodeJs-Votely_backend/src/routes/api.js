@@ -4,8 +4,8 @@ const { registerLimiter } = require("../middlewares/rateLimiter");
 
 const routerAPI = express.Router();
 
-routerAPI.get("/buithach", (req, res) => {
-  return res.status(200).json("Bui Cong Thach");
-});
+// routerAPI.get("/buithach", (req, res) => {
+//   return res.status(200).json("Bui Cong Thach");
+// });
 routerAPI.post("/register", registerLimiter, createUser);
 module.exports = routerAPI;

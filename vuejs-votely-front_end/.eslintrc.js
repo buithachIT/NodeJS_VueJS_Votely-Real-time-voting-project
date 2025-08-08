@@ -20,7 +20,6 @@ module.exports = {
   rules: {
     "vue/multi-word-component-names": "off",
     "prettier/prettier": "error",
-    "no-console": "warn",
     "no-debugger": "error",
     "vue/no-unused-vars": "error",
     "vue/no-unused-components": "warn",

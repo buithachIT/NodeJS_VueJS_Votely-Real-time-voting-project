@@ -1,10 +1,9 @@
 <template>
   <router-view />
+  <Toast />
 </template>
 
-<script setup>
-  // Không cần script nếu chỉ hiển thị router-view
-</script>
+<script setup></script>
 
 <style>
   #app {
