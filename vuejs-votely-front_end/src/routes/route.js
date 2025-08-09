@@ -1,28 +1,30 @@
-import RegisterView from "@/pages/RegisterView.vue";
-import LoginView from "@/pages/LoginView.vue";
+import RegisterView from "@/views/RegisterView.vue";
+import LoginView from "@/views/LoginView.vue";
+import HomeView from "@/views/HomeView.vue";
 import FontDemo from "@/components/ui/FontDemo.vue";
 import { createWebHashHistory, createRouter } from "vue-router";
-import HomeView from "@/pages/HomeView.vue";
+import AuthLayout from "@/layouts/authLayout.vue";
+import DefaultLayout from "@/layouts/defaultLayout.vue";
 
 const routes = [
   {
     path: "/",
-    redirect: "/home",
+    component: DefaultLayout,
+    children: [
+      {
+        path: "/",
+        name: "Home",
+        component: HomeView,
+      },
+    ],
   },
   {
-    path: "/home",
-    name: "Home page",
-    component: HomeView,
-  },
-  {
-    path: "/login",
-    name: "Login",
-    component: LoginView,
-  },
-  {
-    path: "/register",
-    name: "Register",
-    component: RegisterView,
+    path: "/auth",
+    component: AuthLayout,
+    children: [
+      { path: "login", name: "Login", component: LoginView },
+      { path: "register", name: "Register", component: RegisterView },
+    ],
   },
   {
     path: "/fonts",
