@@ -15,7 +15,12 @@ export default {
       roboto: ['Roboto', 'sans-serif'],
       nunito: ['Nunito', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-satoshi)', 'sans-serif'],
+        display: ['var(--font-integral)', 'sans-serif'],
+      },
+    },
   },
   plugins: [vueform],
 }

@@ -10,7 +10,7 @@ export default {
 
     const handleSubmit = (form$) => {
       return submit(form$).then(() => {
-        router.push('/dashboard')
+        router.push('/')
       })
     }
 
@@ -21,7 +21,7 @@ export default {
 
 <template>
   <Vueform class="p-5" :display-errors="false" size="md" @submit="handleSubmit">
-    <StaticElement tag="h1" content="Sign in" />
+    <StaticElement class="font-roboto" tag="h1" content="Sign in" />
     <StaticElement tag="hr" />
 
     <TextElement
